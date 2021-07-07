@@ -12,8 +12,9 @@ COLLISION_WIDTH = SCREEN_WIDTH/2 - 20
 COLLISION_HEIGHT = SCREEN_HEIGHT/2 - 20
 
 
-class PlaySnakeGame():
-    def __init__(self):
+class PlaySnakeGame:
+
+    def __init__(self) -> None:
         self.score = score = Score()
         self.food = food = Food()
         self.snake = snake = Snake()
@@ -30,7 +31,7 @@ class PlaySnakeGame():
         self.screen.onkey(snake.lef, 'Left')
         self.game_is_on = True
 
-    def play(self):
+    def play(self) -> None:
         while self.game_is_on:
             self.screen.update()
             self.snake.move_forward()
